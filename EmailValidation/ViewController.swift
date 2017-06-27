@@ -28,18 +28,17 @@ class ViewController: UIViewController {
     
     
     @IBAction func signUpButton(_ sender: Any) {
-        
-        
-        let emailId = emailTextField.text
-        
-        guard emailId != nil  && emailId?.isEmpty == false else {
+
+       let email = emailTextField.text
+        guard email != "nil" && email?.isEmpty == false else {
+            print(email!)
             print("Email Address field cannot be empty")
             return
         }
         
-        
-        let validmail = validateEmail(candidate: emailId)
-        
+        let validmail = validateEmail(candidate: email)
+        print(validmail)
+
         
         if validmail {
             
